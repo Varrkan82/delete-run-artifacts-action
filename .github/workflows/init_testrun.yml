@@ -10,7 +10,7 @@ jobs:
           dd if=/dev/random of=test1.dump bs=64M count=1
           dd if=/dev/zero of=test2.dump bs=32M count=32 iflag=fullblock
       - name: upload dummy artifact 1
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v4
         with:
           name: test1
           path: ./test1.dump
